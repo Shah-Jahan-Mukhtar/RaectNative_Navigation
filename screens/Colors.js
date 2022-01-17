@@ -5,6 +5,9 @@ import {
   FlatList,
   StyleSheet,
   TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
 } from "react-native";
 
 import Colors from "../components/colorBox";
@@ -21,10 +24,9 @@ const ColorRainbow = ({ navigation }) => {
   return (
     <TouchableOpacity
       onPress={() =>
-        navigation.navigate("Route_Param", {
-          item,
-          colorName,
-          hexCode,
+        navigation.push("RouteParams", {
+          colors: RAINBOW,
+          paletteName: "Solarized",
         })
       }
     >
@@ -42,7 +44,7 @@ const ColorRainbow = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   flat: {
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     padding: 20,
     marginTop: 20,
   },

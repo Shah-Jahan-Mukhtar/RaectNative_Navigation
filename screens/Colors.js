@@ -19,7 +19,15 @@ const RAINBOW = [
 
 const ColorRainbow = ({ navigation }) => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("Route_Params", item)}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate("Route_Param", {
+          item,
+          colorName,
+          hexCode,
+        })
+      }
+    >
       <FlatList
         style={styles.flat}
         data={RAINBOW}

@@ -1,13 +1,13 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, FlatList } from "react-native";
-import Colors from "./components/colorBox";
-import Home from "./screens/home";
+
+import Home from "./screens/Home";
 import ColorRainbow from "./screens/Colors";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Route_Params from "./screens/routeParams";
+import Route_Params from "./screens/RouteParams";
 
 const Stack = createStackNavigator();
 
